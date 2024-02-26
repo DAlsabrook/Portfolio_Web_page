@@ -261,12 +261,13 @@ html {
     min-width: 300px;
     height: auto;
     float: right;
-    margin: 20px;
+    margin-left: 20px;
+
 }
 
 .text_box {
     padding-right: 90px;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .hero_text {
@@ -281,4 +282,45 @@ html {
 
 .hero_subtitle {
     margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: 20px;
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+    width: 25%;
+}
+
+.project-languages {
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+}
+
+.project-languages h6 {
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+    width: 10px;
 }
