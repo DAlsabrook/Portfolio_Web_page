@@ -9,6 +9,7 @@
         <link rel="icon" type="image/png" href="images/da-logo_black_text.png">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700&display=swap" rel="stylesheet">
         <link rel='stylesheet' href='styles/style.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body class="body">
@@ -18,25 +19,15 @@
                     <a href="#">
                         <img src="images/da-logo_black_text.png" alt="logo" width="60" height="60">
                     </a>
+                </div class="nav_bar_list_container">
+                            <div class="nav_bar_list">
+                                <button class="nav-link">About</button>
+                                <button class="nav-link">Skills</button>
+                                <button class="nav-link">Projects</button>
+                                <button class="nav-link">Education</button>
+                                <button class="nav-link">Contact</button>
+                            </div>
                 </div>
-                <ul class="nav-bar-list">
-                    <li>
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li>
-                        <a href="#latest_news" class="nav-link">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#skills" class="nav-link">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#works" class="nav-link">Education</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <div></div>
             </div>
         </header>
         <main class="main">
@@ -52,14 +43,21 @@
                                 I've cultivated and features projects I've independently created. If you're left with questions about my developer
                                 journey, click the buttons below for more insights and a deeper understanding of who I am!</p>
                                 <div class="hero-buttons">
-                                    <a href="#" class="button">Resume</a>
-                                    <a href="https://www.linkedin.com/in/david-alsabrook/" class="button">LinkedIn-Logo</a>
-                                    <a href="https://github.com/DAlsabrook" class="button">Github-Logo</a>
+                                    <button class="resume_button"><div class="fa">Resume</div></button>
+                                    <button class="hero_button"><div href="https://www.linkedin.com/in/david-alsabrook/" class="fa fa-solid fa-linkedin fa-lg"></div></button>
+                                    <button class="hero_button"><div href="https://github.com/DAlsabrook" class="fa fa-solid fa-github fa-lg"></div></button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="wave">
+                    </div>
                 </section>
+                <div class="top_wave">
+                    <svg viewBox="0 40 500 140" preserveAspectRatio="none" class="top_wave_svg">
+                        <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" class="top_wave_path"></path>
+                    </svg>
+                </div>
                 <!-- Skills section -->
                 <section class="skills">
                     <div class="skills-body">
@@ -69,133 +67,133 @@
                         </header>
                         <div class="skills-box">
                             <h2>Front-end</h2>
-                            <button href="#">HTML5-logo</button>
-                            <button href="#">CSS-logo</button>
-                            <button href="#">JAVASCRIPT-logo</button>
-                            <button href="#">REACT-logo</button>
+                            <div class="button_container">
+                                <button href="#">HTML5</button>
+                                <button href="#">CSS</button>
+                                <button href="#">JAVASCRIPT</button>
+                                <button href="#">REACT</button>
+                            </div>
                         </div>
                         <div class="skills-box">
                             <h2>Back-end</h2>
-                            <button href="#">C-logo</button>
-                            <button href="#">PYTHON-logo</button>
-                            <button href="#">MySQL-logo</button>
+                            <div class="button_container">
+                                <button href="#">C</button>
+                                <button href="#">PYTHON</button>
+                                <button href="#">MySQL</button>
+                            </div>
                         </div>
                         <div class="skills-box">
                             <h2>Tools</h2>
-                            <button href="#">VSCode-logo</button>
-                            <button href="#">DOCKER-logo</button>
-                            <button href="#">GITHUB-logo</button>
+                            <div class="button_container">
+                                <button href="#">VSCode</button>
+                                <button href="#">DOCKER</button>
+                                <button href="#">GITHUB</button>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="projects">
-                    <div class="projects-body"></div>
-                        <h2 class="section-title">Projects</h2>
-                        <p class="section-subtitle">Completed or in progress projects</p>
-                        <!-- Portfolio site -->
+                <section class="projects_section">
+                    <div class="wave">
+                        <svg viewBox="0 40 500 140" preserveAspectRatio="none" class="wave_svg">
+                            <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
+                                class="wave_path"></path>
+                        </svg>
+                    </div>
+                    <h2 class="section_title">Projects</h2>
+                    <p class="section_subtitle">Completed or in progress projects</p>
+                    <!-- Portfolio site -->
+                    <div class="projects">
                         <div class="project">
                             <img src="images/" alt="Portfolio site">
-                            <div class="projects-languages">
-                                <h6>HTML5</h6>
-                                <h6>CSS</h6>
-                                <h6>JavaScript</h6>
-                                <h6>Python</h6>
-                                <h6>MySql</h6>
+                            <div class="lang_container">
+                                <div class="projects-languages">
+                                    <h6>HTML5</h6>
+                                    <h6>CSS</h6>
+                                    <h6>JavaScript</h6>
+                                    <h6>Python</h6>
+                                    <h6>MySql</h6>
+                                </div>
                             </div>
                             <h2 class="project-title">Portfolio Site</h2>
                             <p>This is a project where I made this site</p>
-                            <button>GitHub</button>
+                            <div class="github_container">
+                                <button class="github_button">GitHub</button>
+                            </div>
                         </div>
                         <!-- AirBnB project -->
                         <div class="project">
                             <img src="images/" alt="AirBnB">
-                            <div class="projects-languages">
-                                <h6>HTML5</h6>
-                                <h6>CSS</h6>
-                                <h6>JavaScript</h6>
-                                <h6>Python</h6>
-                                <h6>MySql</h6>
+                            <div class="lang_container">
+                                <div class="projects-languages">
+                                    <h6>HTML5</h6>
+                                    <h6>CSS</h6>
+                                    <h6>JavaScript</h6>
+                                    <h6>Python</h6>
+                                    <h6>MySql</h6>
+                                </div>
                             </div>
                             <h2 class="project-title">AirBnB</h2>
                             <p>This is a project where we made an AirBnB clone</p>
-                            <button>GitHub</button>
+                            <div class="github_container">
+                                <button class="github_button">GitHub</button>
+                            </div>
                         </div>
                         <!-- Shell Project-->
                         <div class="project">
                             <img src="images/" alt="Shell">
-                            <div class="projects-languages">
-                                <h6>C</h6>
+                            <div class="lang_container">
+                                <div class="projects-languages">
+                                    <h6>C</h6>
+                                </div>
                             </div>
                             <h2 class="project-title">Shell</h2>
                             <p>A simple shell comand line interpreter</p>
-                            <button>GitHub</button>
+                            <div class="github_container">
+                                <button class="github_button">GitHub</button>
+                            </div>
                         </div>
                         <!-- Printf Project -->
                         <div class="project">
                             <img src="images/" alt="printf">
-                            <div class="projects-languages">
-                                <h6>C</h6>
+                            <div class="lang_container">
+                                <div class="projects-languages">
+                                    <h6>C</h6>
+                                </div>
                             </div>
                             <h2 class="project-title">printf</h2>
                             <p>Re-built the functionality of the printf function</p>
-                            <button>GitHub</button>
+                            <div class="github_container">
+                                <button class="github_button">GitHub</button>
+                            </div>
                         </div>
                         <!-- Hack sprint project -->
                         <div class="project">
                             <img src="images/" alt="Hack Sprint">
-                            <div class="projects-languages">
-                                <h6>HTML5</h6>
-                                <h6>CSS</h6>
-                                <h6>JavaScript</h6>
-                                <h6>Python</h6>
-                                <h6>MySql</h6>
+                            <div class="lang_container">
+                                <div class="projects-languages">
+                                    <h6>HTML5</h6>
+                                    <h6>CSS</h6>
+                                    <h6>JavaScript</h6>
+                                    <h6>Python</h6>
+                                    <h6>MySql</h6>
+                                </div>
                             </div>
                             <h2 class="project-title">Hack-sprint</h2>
                             <p>Have yet to do this project</p>
-                            <button>GitHub</button>
+                            <div class="github_container">
+                                <button class="github_button">GitHub</button>
+                            </div>
                         </div>
                     </div>
                 </section>
         </main>
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-1-2">
-                        <img src="images/da-logo_black_text.png" alt="da-logo_black_text" width="100" height="80">
-
-                    </div>
-                    <div class="col-1-2">
-                        <ul class="social nav">
-                            <li class="LinkedIn">
-                                LinkedIn-Logo
-                            </li>
-                            <li class="GitHub">
-                                Github-Logo
-                            </li>
-                            <li class="email">
-                                Email-Logo
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-1-2">
-                        <p class="footer-copyright">© 2024</p>
-                    </div>
-                    <div class="col-1-2">
-                        <ul class="footer-nav nav">
-                            <li class="footer-nav-item nav-item">
-                                <a href="#" class="footer-nav-link">Terms of use</a>
-                            </li>
-                            <li class="footer-nav-item nav-item">
-                                <a href="#" class="footer-nav-link">Privacy Policy</a>
-                            </li>
-                            <li class="footer-nav-item nav-item">
-                                <a href="#" class="footer-nav-link">Cookie Policy</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="footer_container">
+                <div class="footer_contacts">Email: DAlsabrook@gmail.com</div>
+                <div class="footer_name">David Alsabrook</div>
+                <div class="footer_links">
+                    <i class="fa fa-solid fa-linkedin fa-2x"></i>
+                    <i class="fa fa-solid fa-github fa-2x"></i>
                 </div>
             </div>
         </footer>
