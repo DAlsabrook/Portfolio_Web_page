@@ -2,10 +2,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // Components
 import Home from "./components/Home.js"
+import Portfolio from "./components/Portfolio.js"
+import About from "./components/About.js"
+import Contact from "./components/Contact.js"
+import Resume from "./components/Resume.js"
 
 // Stylesheets
 import './App.css';
-// import './styles/Home.css';
 
 function App() {
 
@@ -73,40 +76,6 @@ function App() {
       </footer>
     </div>
   );
-}
-
-
-
-function Portfolio() {
-  return (
-    <main>
-      <p className='page-text-sample'>Portfolio page</p>
-    </main>
-  )
-}
-
-function Resume() {
-  return (
-    <main>
-      <p>Resume page</p>
-    </main>
-  )
-}
-
-function About() {
-  return (
-    <main>
-      <p>About page</p>
-    </main>
-  )
-}
-
-function Contact() {
-  return (
-    <main>
-      <p>Contact page</p>
-    </main>
-  )
 }
 
 export default App;
