@@ -1,7 +1,33 @@
+/* Nav bar and footer styling in this file*/
+
 * {
   box-sizing: border-box;
 }
 
+/* All decoration and behavior removed from anchors */
+a {
+  text-decoration: none;
+  /* Remove underlines */
+  color: inherit;
+  /* Inherit color from parent */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+}
+
+a:visited {
+  color: inherit;
+  /* Inherit color from parent, even after link is visited */
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  /* Remove underlines on hover/focus */
+  outline: none;
+  /* Remove outline on focus */
+}
+
+/* Grid View sizing for mobile */
 .col-1 {
   width: 25%;
 }
@@ -18,7 +44,11 @@
   width: 100%;
 }
 
-/* Mobile styles */
+/* Mobile styles
+==========================================
+  ==========================================
+    ==========================================
+      ==========================================*/
 #root {
   margin: auto;
 }
@@ -39,14 +69,44 @@
   padding-right: 5%;
   padding-top: 20px;
 }
-
-.nav-btns {
+.nav-list {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
+  /* Remove bullet points */
 }
 
-/* Tablet/Laptop/Desktop styles */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(58, 63, 74);
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  /* Remove bullet points */
+}
+
+
+/* Tablet/Laptop/Desktop styles
+==========================================
+  ==========================================
+    ==========================================
+      ==========================================*/
 @media (min-width: 768px) {
+  /* Grid View sizing for computer */
   .col-1 {
     width: 8.33%;
   }
@@ -102,6 +162,11 @@
 
   .nav-bar {
     flex-direction: row;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: normal;
   }
 
 }
