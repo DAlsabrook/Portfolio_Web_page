@@ -1,5 +1,23 @@
-/* Nav bar and footer styling in this file*/
+/* Global styling, Nav bar, and footer styling in this file*/
 
+
+/* CSS Variables */
+:root {
+  --primary-color: #000000;
+  /* Used for article text, sub-titles,and page titles */
+  --secondary-color: #3a3f4a;
+  /* Used for footer, titles, and page subtitles */
+  --accent-color: #fcdc6a;
+  /* Used for some buttons and title decoration */
+  --font-text: Verdana,
+    Arial,
+    Helvetica,
+    sans-serif;
+  /* Used for titles and some sub-titles */
+  --font-titles: fantasy;
+}
+
+/* Some global styling things */
 * {
   box-sizing: border-box;
 }
@@ -27,28 +45,30 @@ a:focus {
   /* Remove outline on focus */
 }
 
-/* Grid View sizing for mobile */
-.col-1 {
-  width: 25%;
+/* Remove all list styling */
+ul,
+ol {
+  list-style-type: none;
+  /* Remove bullet points or numbers */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
 }
 
-.col-2 {
-  width: 50%;
+li {
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
 }
 
-.col-3 {
-  width: 75%;
-}
 
-.col-4 {
-  width: 100%;
-}
 
 /* Mobile styles
 ==========================================
-  ==========================================
-    ==========================================
-      ==========================================*/
+==========================================*/
+
 #root {
   margin: auto;
 }
@@ -57,33 +77,73 @@ a:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  /* Push footer to the bottom */
   margin: auto;
+  /* center */
+  height: 100vh;
+  /* No matter the content always take 100% of veiwport height */
+  font-family: var(--font-text);
 }
 
-.nav-bar {
+/* .nav-bar {
+  potentially for changing whole bar coloring
+} */
+
+.nav-bar-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 20px;
+}
+
+.nav-logo {
+  font-family: 'Courier New', monospace;
+  font-size: larger;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-top: -6%;
 }
 .nav-list {
   display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  /* Remove bullet points */
+}
+.nav-list>li {
+  margin-right: 20px;
+}
+
+.contact-btn {
+  background-color: var(--accent-color);
+  height: 60px;
+  width: 120px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 90%;
+  margin: auto;
 }
 
 footer {
+  background-color: var(--secondary-color);
+  bottom: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(58, 63, 74);
-  bottom: 0;
-  position: absolute;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   color: white;
   padding-left: 5%;
@@ -95,16 +155,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  list-style-type: none;
-  /* Remove bullet points */
 }
 
 
 /* Tablet/Laptop/Desktop styles
 ==========================================
-  ==========================================
-    ==========================================
-      ==========================================*/
+==========================================*/
 @media (min-width: 768px) {
   /* Grid View sizing for computer */
   .col-1 {
@@ -157,16 +213,28 @@ footer {
 
   .App {
     align-items: normal;
+  }
+
+  .content-container {
+    width: 100%;
     max-width: 1440px;
+    margin: auto;
   }
 
-  .nav-bar {
+  /* .nav-bar {
+    potentially for changing whole bar coloring
+  } */
+
+  .nav-bar-content {
     flex-direction: row;
   }
 
-  footer {
-    flex-direction: row;
-    align-items: normal;
+  .nav-links {
+    margin-top:0%;
+    width: 360px;
   }
 
+  .footer-content {
+    flex-direction: row;
+  }
 }

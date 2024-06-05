@@ -1,0 +1,30 @@
+/* Mobile styles
+==========================================
+==========================================*/
+.home {
+    color: var(--primary-color);
+    height: 100%;
+}
+
+.home-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 4%;
+}
+.banner-title {
+    font-family: var(--font-titles);
+    font-weight: 200;
+}
+
+.banner-subtitle {
+    font-family: var(--font-titles);
+    font-weight: 100;
+    color: var(--secondary-color);
+}
+
+/* Tablet/Laptop/Desktop styles
+==========================================
+==========================================*/
