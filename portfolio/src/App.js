@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import Home from "./components/Home.js"
@@ -6,43 +7,61 @@ import Portfolio from "./components/Portfolio.js"
 import About from "./components/About.js"
 import Contact from "./components/Contact.js"
 import Resume from "./components/Resume.js"
+import { Squash as Hamburger } from 'hamburger-react'
 
 // Stylesheets
 import './App.css';
 
 function App() {
 
-  let navStyle = {};
+  // This var and useEffect are to detect if a device was rotated and remove hamburger
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      // If device has gone to landscape mode
+      if (window.innerWidth > window.innerHeight && isNavOpen) {
+        setIsNavOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    // Clean up event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isNavOpen]);
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    navStyle = { backgroundColor: 'black' };
-  } else {
-    navStyle = { backgroundColor: 'transparent' };
-  }
-
+  // JSX to be injected
   return (
     <div className="App">
       <Router>
         {/* Navigation bar */}
-        <nav className='nav-bar col-12' style={navStyle}>
+        <nav className='nav-bar col-12'>
           <div className='content-container'>
             <div className='nav-bar-content'>
               <div className="nav-logo">
-                <Link to="/"><h1>David Alsabrook</h1></Link>
+                <Link to="/" className="nav-logo-button"><h1>David Alsabrook</h1></Link>
+                <div className='hamburger'>
+                  <Hamburger
+                    toggled={isNavOpen}
+                    onToggle={toggled => setIsNavOpen(toggled)}
+                    duration={1}
+                    label="Show navigation menu"
+                  />
+                </div>
               </div>
-              <div className='nav-links col-5'>
+              <div className={`nav-links-${isNavOpen ? 'open' : 'closed'} col-5`}>
                 <ul className='nav-list col-9'>
-                  <li><Link to="/portfolio">Portfolio</Link></li>
-                  <li><Link to="/resume">Resume</Link></li>
-                  <li><Link to="/about">About</Link></li>
+                  <li><Link to="/portfolio" className="nav-link-button" onClick={() => setIsNavOpen(false)}>Portfolio</Link></li>
+                  <li><Link to="/resume" className="nav-link-button" onClick={() => setIsNavOpen(false)}>Resume</Link></li>
+                  <li><Link to="/about" className="nav-link-button" onClick={() => setIsNavOpen(false)}>About</Link></li>
                 </ul>
-                <div className='contact-btn'><Link to="/contact">Contact</Link></div>
+                <Link to="/contact" className='contact-btn' onClick={() => setIsNavOpen(false)}>Contact</Link>
               </div>
             </div>
           </div>
         </nav>
 
-        {/* SPA Content */}
+        {/* SPA dynamic Content */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
@@ -60,16 +79,15 @@ function App() {
               <h1>David Alsabrook</h1>
             </div>
             <div className='footer-social'>
-              <h1>Social</h1>
+              <h1>Socials</h1>
               <ul className='footer-list'>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Github</a></li>
-                <li><a href="">Medium</a></li>
-                <li><a href="">HireAtlasGrads.com</a></li>
+                <li><a href="https://www.linkedin.com/in/david-alsabrook/">LinkedIn</a></li>
+                <li><a href="https://github.com/DAlsabrook">Github</a></li>
+                <li><a href="https://www.hireatlasgrads.com/">HireAtlasGrads.com</a></li>
               </ul>
             </div>
             <div className='footer-legal'>
-              <p>Copyright 2024 David Alsabrook</p>
+              <p>Copyright &copy; 2024 David Alsabrook</p>
             </div>
           </div>
         </div>

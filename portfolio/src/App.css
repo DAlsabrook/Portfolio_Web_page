@@ -84,6 +84,7 @@ li {
   height: 100vh;
   /* No matter the content always take 100% of veiwport height */
   font-family: var(--font-text);
+  padding-top: 15px;
 }
 
 /* .nav-bar {
@@ -97,23 +98,58 @@ li {
   align-items: center;
   padding-left: 5%;
   padding-right: 5%;
+  width: 100%;
 }
 
 .nav-logo {
   font-family: 'Courier New', monospace;
   font-size: larger;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
 }
 
-.nav-links {
+.nav-logo-button {
+  height: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: -6%;
 }
+
+.nav-links-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  width: 80vw;
+  z-index: 5;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.nav-links-closed {
+  transform: translateY(-25%);
+  opacity: 0;
+  visibility: hidden;
+  height: 0vh;
+  transition: transform 0.3s ease-out, height 0.9s ease-out, 0.3s ease-out, visibility 0.1s ease-out;
+}
+
 .nav-list {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
 }
-.nav-list>li {
-  margin-right: 20px;
+
+.nav-link-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
 }
 
 .contact-btn {
@@ -229,9 +265,32 @@ footer {
     flex-direction: row;
   }
 
-  .nav-links {
-    margin-top:0%;
+  .nav-logo {
+    width: 350px;
+  }
+
+  .nav-links-closed {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 360px;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: -3%;
+  }
+
+  .nav-list>li {
+    margin-right: 20px;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .footer-content {

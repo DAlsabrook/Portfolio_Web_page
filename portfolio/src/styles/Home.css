@@ -13,6 +13,7 @@
     align-items: center;
     margin: auto;
     padding: 4%;
+    width: 80%;
 }
 .banner-title {
     font-family: var(--font-titles);
