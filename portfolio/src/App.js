@@ -8,6 +8,7 @@ import About from "./components/About.js"
 import Contact from "./components/Contact.js"
 import Resume from "./components/Resume.js"
 import { Squash as Hamburger } from 'hamburger-react'
+import logo from './images/Silhouette-logo.png';
 
 // Stylesheets
 import './App.css';
@@ -39,7 +40,10 @@ function App() {
           <div className='content-container'>
             <div className='nav-bar-content'>
               <div className="nav-logo">
-                <Link to="/" className="nav-logo-button"><h1>David Alsabrook</h1></Link>
+                <Link to="/" className="nav-logo-button">
+                  <img src={logo} alt='logo'></img>
+                  <h1>David Alsabrook</h1>
+                </Link>
                 <div className='hamburger'>
                   <Hamburger
                     toggled={isNavOpen}

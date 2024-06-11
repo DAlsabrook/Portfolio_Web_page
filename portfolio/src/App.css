@@ -3,12 +3,22 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #000000;
+  --color-black: #000000;
   /* Used for article text, sub-titles,and page titles */
-  --secondary-color: #3a3f4a;
+
+  --color-white: #ffffff;
+  /* Background of site, cards, text */
+
+  --color-davys-grey: #55505C;
   /* Used for footer, titles, and page subtitles */
-  --accent-color: #fcdc6a;
+
+  --color-rust: #A24915;
+
+  --color-accent-naples-yellow: #F2DC5D;
   /* Used for some buttons and title decoration */
+
+  --color-accent-blue: #78A1BB;
+
   --font-text: Verdana,
     Arial,
     Helvetica,
@@ -20,6 +30,9 @@
 /* Some global styling things */
 * {
   box-sizing: border-box;
+}
+html {
+  background-color: var(--color-white);
 }
 
 /* All decoration and behavior removed from anchors */
@@ -105,8 +118,8 @@ li {
   font-family: 'Courier New', monospace;
   font-size: larger;
   display: flex;
-  justify-content: space-evenly;
-  width: 100vw;
+  justify-content: space-between;
+  width: 90vw;
 }
 
 .nav-logo-button {
@@ -114,6 +127,12 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 250px;
+}
+
+.nav-logo-button img {
+  height: 90px;
+  margin-right: -5%;
 }
 
 .nav-links-open {
@@ -153,7 +172,7 @@ li {
 }
 
 .contact-btn {
-  background-color: var(--accent-color);
+  background-color: var(--color-accent-naples-yellow);
   height: 60px;
   width: 120px;
   border-radius: 8px;
@@ -168,7 +187,7 @@ li {
 }
 
 footer {
-  background-color: var(--secondary-color);
+  background-color: var(--color-davys-grey);
   bottom: 0;
   width: 100%;
   display: flex;
@@ -181,7 +200,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  color: white;
+  color: var(--color-white);
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 20px;
