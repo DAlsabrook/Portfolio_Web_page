@@ -2,8 +2,10 @@ import '../styles/Contact.css';
 
 function Contact() {
     return (
-        <main>
-            <p>Contact page</p>
+        <main className="contact">
+            <div className="content-container">
+                <p>Contact page</p>
+            </div>
         </main>
     )
 }

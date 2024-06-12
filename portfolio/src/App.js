@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       <Router>
         {/* Navigation bar */}
-        <nav className='nav-bar col-12'>
+        <nav>
           <div className='content-container'>
             <div className='nav-bar-content'>
               <div className="nav-logo">
@@ -64,7 +64,6 @@ function App() {
             </div>
           </div>
         </nav>
-
         {/* SPA dynamic Content */}
           <Routes>
             <Route path="/" element={<Home />} />

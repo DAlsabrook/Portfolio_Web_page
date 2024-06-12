@@ -2,8 +2,10 @@ import '../styles/Resume.css';
 
 function Resume() {
     return (
-        <main>
-            <p>Resume page</p>
+        <main className="resume">
+            <div className="content-container">
+                <p>Resume page</p>
+            </div>
         </main>
     )
 }

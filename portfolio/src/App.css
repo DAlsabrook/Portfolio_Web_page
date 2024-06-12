@@ -29,12 +29,41 @@
   --font-titles: fantasy;
 }
 
-/* Some global styling things */
+/* Global styling for all main sections of page
+===============================================*/
+
 * {
   box-sizing: border-box;
 }
+
 html {
-  background-color: var(--color-white);
+  background-color: var(--color-davys-grey);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  width: 90%;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer {
+  background-color: var(--color-davys-grey);
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* All decoration and behavior removed from anchors */
@@ -94,25 +123,19 @@ li {
   align-items: center;
   justify-content: space-between;
   /* Push footer to the bottom */
-  margin: auto;
-  /* center */
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   /* No matter the content always take 100% of veiwport height */
   font-family: var(--font-text);
   padding-top: 15px;
+  background-color: var(--color-white);
 }
-
-/* .nav-bar {
-  potentially for changing whole bar coloring
-} */
 
 .nav-bar-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
   width: 100%;
 }
 
@@ -122,6 +145,7 @@ li {
   display: flex;
   justify-content: space-between;
   width: 90vw;
+  /* Width also include the hamburger for mobile */
 }
 
 .nav-logo-button {
@@ -183,20 +207,6 @@ li {
   align-items: center;
 }
 
-.content-container {
-  width: 90%;
-  margin: auto;
-}
-
-footer {
-  background-color: var(--color-davys-grey);
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -219,68 +229,10 @@ footer {
 ==========================================
 ==========================================*/
 @media (min-width: 768px) {
-  /* Grid View sizing for computer */
-  .col-1 {
-    width: 8.33%;
-  }
-
-  .col-2 {
-    width: 16.66%;
-  }
-
-  .col-3 {
-    width: 25%;
-  }
-
-  .col-4 {
-    width: 33.33%;
-  }
-
-  .col-5 {
-    width: 41.66%;
-  }
-
-  .col-6 {
-    width: 50%;
-  }
-
-  .col-7 {
-    width: 58.33%;
-  }
-
-  .col-8 {
-    width: 66.66%;
-  }
-
-  .col-9 {
-    width: 75%;
-  }
-
-  .col-10 {
-    width: 83.33%;
-  }
-
-  .col-11 {
-    width: 91.66%;
-  }
-
-  .col-12 {
-    width: 100%;
-  }
-
-  .App {
-    align-items: normal;
-  }
 
   .content-container {
-    width: 100%;
     max-width: 1440px;
-    margin: auto;
   }
-
-  /* .nav-bar {
-    potentially for changing whole bar coloring
-  } */
 
   .nav-bar-content {
     flex-direction: row;

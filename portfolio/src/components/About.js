@@ -2,8 +2,10 @@ import '../styles/About.css';
 
 function About() {
     return (
-        <main>
-            <p>About page</p>
+        <main className="about">
+            <div className="content-container">
+                <p>About page</p>
+            </div>
         </main>
     )
 }
