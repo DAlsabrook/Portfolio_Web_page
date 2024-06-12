@@ -19,7 +19,7 @@
   --color-accent-yellow: #FFE75C;
   /* Used for some buttons and title decoration */
 
-  --color-accent-blue: #78A1BB;
+  --color-accent-blue: #3b6d8c;
 
   --font-text: Verdana,
     Arial,
@@ -44,6 +44,12 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
+  top: 0;
+  height: 85px;
+  padding-top: 15px;
+  z-index: 2;
+  position: fixed;
+  background-color: var(--color-white);
 }
 
 .content-container {
@@ -54,7 +60,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 105px;
   padding-bottom: 30px;
 }
 
@@ -127,7 +133,6 @@ li {
   width: 100%;
   /* No matter the content always take 100% of veiwport height */
   font-family: var(--font-text);
-  padding-top: 15px;
   background-color: var(--color-white);
 }
 
@@ -144,8 +149,9 @@ li {
   font-size: larger;
   display: flex;
   justify-content: space-between;
+  z-index: 100;
   width: 90vw;
-  /* Width also include the hamburger for mobile */
+  /* Width also includes the hamburger for mobile */
 }
 
 .nav-logo-button {
@@ -162,24 +168,29 @@ li {
 }
 
 .nav-links-open {
-  transform: translateY(0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   opacity: 1;
   visibility: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50vh;
-  width: 80vw;
-  z-index: 5;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  justify-content: center;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  font-size: large;
+  z-index: 10;
+  transition: opacity 0.6s ease-out;
+  background-color: var(--color-white);
 }
 
 .nav-links-closed {
-  transform: translateY(-25%);
   opacity: 0;
   visibility: hidden;
   height: 0vh;
-  transition: transform 0.3s ease-out, height 0.9s ease-out, 0.3s ease-out, visibility 0.1s ease-out;
 }
 
 .nav-list {
