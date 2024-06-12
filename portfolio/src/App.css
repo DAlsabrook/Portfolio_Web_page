@@ -12,9 +12,11 @@
   --color-davys-grey: #3D3941;
   /* Used for footer, titles, and page subtitles */
 
-  --color-rust: #A24915;
+  --color-rust: #C7591A;
 
-  --color-accent-naples-yellow: #F2DC5D;
+  --color-beige: #EDEBD4;
+
+  --color-accent-yellow: #FFE75C;
   /* Used for some buttons and title decoration */
 
   --color-accent-blue: #78A1BB;
@@ -172,7 +174,7 @@ li {
 }
 
 .contact-btn {
-  background-color: var(--color-accent-naples-yellow);
+  background-color: var(--color-accent-yellow);
   height: 60px;
   width: 120px;
   border-radius: 8px;
