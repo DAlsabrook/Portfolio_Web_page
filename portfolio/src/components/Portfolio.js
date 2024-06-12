@@ -65,7 +65,7 @@ function Portfolio() {
                                 "<p>Description of project that I used this great tech in. I learned a lot\
                                 from it and will never forget how to use this technology for sure. I dont\
                                 know how anyone could forget any of this crazy code</p>",
-                                "https://github.com/DAlsabrook/Instructor_Index")}>Details
+                                "https://github.com/DAlsabrook/Portfolio_Web_page")}>Details
                             </button>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ function Portfolio() {
                             <h1>The Shallot</h1>
                             <p>
                                 This site is a fully front end sequential discovery puzzle.
-                                I only use html, javascript, and CSS to make this site.
+                                I only used html, javascript, and CSS to make this site.
                             </p>
                             <button onClick={() => modal("Instructor Index",
                                 "<p>JavaScript</p> <p>HTML</p> <p>CSS</p>",
